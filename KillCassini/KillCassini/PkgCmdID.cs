@@ -2,7 +2,7 @@
 // MUST match PkgCmdID.h
 using System;
 
-namespace LatishSehgal.KillCassini
+namespace TheMrAnderson.KillCassini
 {
     static class PkgCmdIDList
     {

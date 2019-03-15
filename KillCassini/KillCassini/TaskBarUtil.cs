@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.OLE.Interop;
 
-namespace LatishSehgal.KillCassini
+namespace TheMrAnderson.KillCassini
 {
     internal class TaskBarUtil
     {

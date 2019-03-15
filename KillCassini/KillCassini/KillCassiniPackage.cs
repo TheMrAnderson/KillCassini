@@ -7,7 +7,7 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell;
 
-namespace LatishSehgal.KillCassini
+namespace TheMrAnderson.KillCassini
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
@@ -35,16 +35,15 @@ namespace LatishSehgal.KillCassini
                 var processesKilled = CassiniUtil.KillAllCassiniInstances();
 
                 DebugPane.Activate();
-                DebugPane.OutputString(string.Format("{0}: Mission Acquired. Hunting... \r\n",PackageName));
+                DebugPane.OutputString($"{PackageName}: Mission Acquired. Hunting... \r\n");
                 processesKilled.ForEach(p => DebugPane
-                            .OutputString(String.Format("{0}: Killed {1}: Id= {2}, Handle= {3}.\r\n",
-                            PackageName,p.Name, p.Id, p.Handle)));
+                            .OutputString($"{PackageName}: Killed {p.Name}: Id= {p.Id}, Handle= {p.Handle}.\r\n"));
                 TaskBarUtil.RefreshNotificationArea();
-                DebugPane.OutputString(string.Format("{0}: Over and Out. \r\n",PackageName));
+                DebugPane.OutputString($"{PackageName}: Over and Out. \r\n");
             }
             catch (Exception exception)
             {
-                Trace.WriteLine(string.Format(CultureInfo.CurrentCulture, "Exception: {0}", exception.Message));
+                Trace.WriteLine(CultureInfo.CurrentCulture, $"Exception: {exception.Message}");
             }
         }
 

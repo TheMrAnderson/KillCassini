@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LatishSehgal.KillCassini
+namespace TheMrAnderson.KillCassini
 {
     internal struct ProcessInfo
     {

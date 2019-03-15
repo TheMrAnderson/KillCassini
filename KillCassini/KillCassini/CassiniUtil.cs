@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace LatishSehgal.KillCassini
+namespace TheMrAnderson.KillCassini
 {
     internal class CassiniUtil
     {
